@@ -24,21 +24,11 @@ function onClick(event) {
   if (event.target.nodeName !== 'IMG') {
     return;
   }
-  const largeImageURL = event.target.getAttribute('data-source');
+  const image = event.target.getAttribute('data-source');
   const instance = basicLightbox.create(`
-    <img src="${largeImageURL}" width="800" height="600">
+    <img src="${image}">
   `);
   instance.show();
 }
 
-
-
 console.log(galleryItems);
-
-
-/*const instance = basicLightbox.create(`
-    <h1>Dynamic Content</h1>
-    <p>You can set the content of the lightbox with JS.</p>
-`)
-console.log(instance);
-instance.show()*/
